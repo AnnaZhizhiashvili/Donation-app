@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.padding-x-lg {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.flex {
+    display: flex;
+}
+.align-items-baseline {
+    align-items: baseline;
+}
+.font-size-sm {
+    font-size: 0.8rem;
+}
+
+.container {
+    margin: 50px;
+    display: inline-block;
+}
+
+.info-container {
+    background: #face9d;
+    margin-top: 20px;
+    padding: 12px 13px;
+    position: relative;
+}
+
+.info-container::after {
+    content: "";
+    position: absolute;
+    right: 12%;
+    bottom: 100%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #face9d;
+}
+
+
+
+.text-color {
+    color: #282830;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+    background-color: #113572;  /* ++++ */
+    color: #fff; /* ++++ */
+  outline: none;
+  border: 1px solid #ccc;
+  border-bottom: none;
+    position: relative;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);*/
+  /*clip-path: inset(-10px -10px -1px -10px)*/
+}
+.tab:first-child {
+  margin-right: 5px;
+}
+.tab.active::before {
+    content: "";
+    position: absolute;
+    top: 94%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 4px solid white;
+}
+
+.tab.active {
+    background-color: #fff;
+    color: #193064;  /* ++++ */
+    font-weight: bold;
+    padding: 15px 24px 10px 24px;
+}
+
+.tab:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.content {
+  height: 500px;
+    padding-top: 27px;
+  position: relative;
+  border: 1px solid #ccc; /* Adjust border color and style as needed */
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);*/
+}
+
+/* donation amount radios */
+h2 {
+    font-size: 16px;
+}
+ul.amount-list  {
+    display: flex;
+    gap: 5px;
+    list-style-type: none;
+    position: relative;
+    margin-top: 7px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Style for the label as a button */
+label {
+    display: inline-block;
+    padding: 10px 33px;
+    background-color: #ebedf5; /* ++ */
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+label.disabled {
+    cursor: default;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background: #f39223;
+    img {
+        width: 9px;
+    }
+}
+/* Style for the label when checked */
+input[type="radio"]:checked + label {
+    background-color: #329ba1; /* ++ */
+    color: white;
+}
+
+/* Custom circle and check sign for the checked state */
+input[type="radio"]:checked + label::before {
+    content: "\2713"; /* Check mark symbol */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #329ba1; /* ++ */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+input[type="number"] {
+    height: 100%;
+    outline: none;
+    padding-left: 5px;
+}
