@@ -1,0 +1,52 @@
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    padding: 10px 33px;
+    min-width: 93px;
+    background-color: var(--primary-grey);
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+label.disabled {
+    min-width: 187px;
+    cursor: default;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background: #f39223;
+    img {
+        width: 9px;
+    }
+}
+input[type="radio"]:checked + label {
+    background-color: #329ba1; /* ++ */
+    color: white;
+}
+
+input[type="radio"]:checked + label::before {
+    content: "\2713"; /* Check mark symbol */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #329ba1; /* ++ */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+input[type="number"] {
+    height: 100%;
+    outline: none;
+    padding-left: 5px;
+}

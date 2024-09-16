@@ -1,0 +1,43 @@
+
+
+ul.amount-list  {
+    display: flex;
+    gap: 5px;
+    list-style-type: none;
+    position: relative;
+    margin-top: 7px;
+}
+
+@media (max-width: 992px) {
+    ul.amount-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .standard-items-container{
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+
+    }
+    .standard-item {
+        flex-basis: 48%;
+    }
+    .standard-item label, input[type="number"]{
+        width: 100%;
+    }
+    .non-standard-items-container {
+        flex-direction: column;
+        gap: 15px;
+
+    }
+    input[type="number"] {
+        padding: 13px;
+    }
+}
+
+
+
+

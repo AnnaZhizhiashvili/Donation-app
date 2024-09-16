@@ -1,0 +1,33 @@
+.info-container {
+    background: var(--secondary-orange);
+    margin-top: 20px;
+    padding: 12px 13px;
+    position: relative;
+}
+
+.info-container::after {
+    content: "";
+    position: absolute;
+    left: 668px;
+    bottom: 100%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid var(--secondary-orange);
+}
+
+@media (max-width: 992px) {
+    .info-container::after {
+        left: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-container::after {
+        left: 50%;
+    }
+}
+
+
+
+
+

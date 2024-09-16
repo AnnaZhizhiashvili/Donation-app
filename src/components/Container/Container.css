@@ -1,0 +1,49 @@
+.container {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--primary-blue);
+    color: white;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-bottom: none;
+    position: relative;
+
+}
+.tab:first-child {
+    margin-right: 5px;
+}
+.tab.active::before {
+    content: "";
+    position: absolute;
+    top: 94%;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 4px solid white;
+}
+
+.tab.active {
+    background-color: white;
+    color: var(--primary-blue);
+    font-weight: bold;
+    padding: 15px 24px 10px 24px;
+}
+
+.tab:focus {
+    outline: none;
+}
+
+.content {
+    padding-top: 27px;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+
