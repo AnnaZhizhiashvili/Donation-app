@@ -8,6 +8,11 @@ ul.amount-list  {
     margin-top: 7px;
 }
 
+input[type="number"]::placeholder {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
 @media (max-width: 992px) {
     ul.amount-list {
         flex-direction: column;

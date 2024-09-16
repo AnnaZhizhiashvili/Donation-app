@@ -14,7 +14,7 @@ const DonationAmountListItem = ({ identifier, amount, selectedAmount, handleAmou
             />
             <label htmlFor={identifier}
                    className={(disabled ? 'disabled' : '') + (selectedAmount === amount ? 'selected' : '') + (" flex justify-content-center")}>
-                {text ? <span>{text} </span> : <span>£{amount}</span>}
+                {text ? <span className="font-bold">{text} </span> : <span className="font-bold">£{amount}</span>}
                 {disabled && <img alt="secure-logo" src="assets/secure.svg"></img>}
             </label>
         </>
